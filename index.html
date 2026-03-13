@@ -186,19 +186,19 @@
   </div>
   <div class="espacos-grid">
     <div class="espaco-card">
-      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=700&q=80&fit=crop" alt="Pavilhão de Cerimônias" loading="lazy" decoding="async" class="lazy-hidden">
-      <p class="espaco-card-name">Pavilhão de Cerimônias</p>
-      <p class="espaco-card-desc">Estrutura de vidro e madeira que abre para o lago. Capacidade para 200 convidados.</p>
+      <img src="./images/pavilhao.avif" alt="Pavilhão de Cerimônias" loading="lazy" decoding="async" class="lazy-hidden">
+      <p class="espaco-card-name">Pavilhão</p>
+      <p class="espaco-card-desc">Estrutura de madeira que interliga ao restante. Capacidade para 100 convidados.</p>
     </div>
     <div class="espaco-card">
-      <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=700&q=80&fit=crop" alt="Cabanas na Floresta" loading="lazy" decoding="async" class="lazy-hidden">
-      <p class="espaco-card-name">Cabanas na Floresta</p>
-      <p class="espaco-card-desc">Seis cabanas com paredes de vidro, imersas no bosque. Conforto absoluto e silêncio total.</p>
+      <img src="./images/jogos.avif" alt="Cabanas na Floresta" loading="lazy" decoding="async" class="lazy-hidden">
+      <p class="espaco-card-name">Área de jogos</p>
+      <p class="espaco-card-desc">Área para conforto e diversão de aldultos e crianças. Conforto absoluto e silêncio total.</p>
     </div>
     <div class="espaco-card">
-      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80&fit=crop" alt="Trilhas & Jardins" loading="lazy" decoding="async" class="lazy-hidden">
-      <p class="espaco-card-name">Trilhas &amp; Jardins</p>
-      <p class="espaco-card-desc">Três quilômetros de trilhas guiadas, jardim de ervas e área de meditação ao ar livre.</p>
+      <img src="./images/jardim.avif" alt="Trilhas & Jardins" loading="lazy" decoding="async" class="lazy-hidden">
+      <p class="espaco-card-name">Jardins</p>
+      <p class="espaco-card-desc">Jardim e área de conforto ao ar livre.</p>
     </div>
   </div>
 </section>
@@ -530,7 +530,7 @@
 
   // Light, optimized IntersectionObserver lazy + reveal
   document.addEventListener('DOMContentLoaded', () => {
-    const imgs = Array.from(document.querySelectorAll('img[data-src]'));
+    const imgs = Array.from(document.querySelectorAll('img.lazy-hidden'));
     if (!imgs.length) return;
 
     const rootMargin = '200px 0px 200px 0px'; // quão cedo carregar (ajuste se quiser)

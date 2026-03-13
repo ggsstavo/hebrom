@@ -1146,7 +1146,6 @@
     display: block;
     width: 100%;
     height: auto;
-    /* reserve approximate space to avoid CLS — if you can add exact width/height per image, remove this */
     aspect-ratio: 3 / 2;
     object-fit: cover;
   }
