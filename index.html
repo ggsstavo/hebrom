@@ -432,44 +432,84 @@
 <!-- CONTATO -->
 <section id="contato">
   <div class="contato-inner">
+
+    <!-- coluna esquerda: info -->
     <div class="contato-left">
       <span class="section-label">Contato</span>
       <h2 class="contato-title">Venha <em>respirar.</em></h2>
       <p class="contato-desc">Agende uma visita ao rancho. Queremos que você sinta o espaço, caminhe pelas trilhas e imagine seu momento aqui — antes de decidir qualquer coisa.</p>
       <div class="contato-info">
         <p>Telefone — <strong>(11) 99999-0000</strong></p>
-        <p>Email — <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3b0bcbda7b2a7bc93a7b6a1a1b2b5baa1beb2fdb0bcbefdb1a1">[email&#160;protected]</a></strong></p>
+        <p>Email — <strong>contato@hebrom.com.br</strong></p>
         <p>Localização — <strong>Interior de São Paulo, Brasil</strong></p>
       </div>
     </div>
+
+    <!-- coluna direita: whatsapp -->
     <div class="contato-right">
-      <div class="form-spacer">
-        <div class="form-row" style="margin-bottom:0">
-          <div class="form-group">
-            <input type="text" class="form-field" placeholder="Nome">
+
+      <!-- card de contato WhatsApp -->
+      <div class="wa-card">
+
+        <!-- cabeçalho estilo chat -->
+        <div class="wa-header">
+          <div class="wa-avatar">
+            <i class="fa-solid fa-tree"></i>
           </div>
-          <div class="form-group">
-            <input type="email" class="form-field" placeholder="Email">
+          <div class="wa-header-info">
+            <p class="wa-name">Hebrom Rancho</p>
+            <p class="wa-status">
+              <span class="wa-dot"></span>
+              Normalmente responde em minutos
+            </p>
+          </div>
+          <i class="fa-brands fa-whatsapp wa-header-icon"></i>
+        </div>
+
+        <!-- balão de mensagem automática -->
+        <div class="wa-body">
+          <div class="wa-bubble">
+            <p>Olá! 👋 Bem-vindo ao <strong>Hebrom Rancho.</strong></p>
+            <p>Escolha o assunto e te respondemos pelo WhatsApp agora mesmo.</p>
+            <span class="wa-time">agora</span>
           </div>
         </div>
-        <div style="margin-top:0">
-          <input type="tel" class="form-field" placeholder="Telefone" style="margin-top:0">
+
+        <!-- botões de assunto rápido -->
+        <div class="wa-topics">
+          <button class="wa-topic" onclick="sendWA('Olá! Gostaria de informações sobre casamentos no Hebrom Rancho.')">
+            <i class="fa-solid fa-heart"></i> Casamento
+          </button>
+          <button class="wa-topic" onclick="sendWA('Olá! Gostaria de informações sobre retiros corporativos no Hebrom Rancho.')">
+            <i class="fa-solid fa-briefcase"></i> Retiro Corporativo
+          </button>
+          <button class="wa-topic" onclick="sendWA('Olá! Gostaria de informações sobre eventos privados no Hebrom Rancho.')">
+            <i class="fa-solid fa-star"></i> Evento Privado
+          </button>
+          <button class="wa-topic" onclick="sendWA('Olá! Gostaria de agendar uma visita ao Hebrom Rancho.')">
+            <i class="fa-solid fa-calendar"></i> Agendar Visita
+          </button>
+          <button class="wa-topic" onclick="sendWA('Olá! Gostaria de informações sobre hospedagem nas cabanas do Hebrom Rancho.')">
+            <i class="fa-solid fa-house"></i> Hospedagem
+          </button>
+          <button class="wa-topic" onclick="sendWA('Olá! Tenho uma dúvida sobre o Hebrom Rancho.')">
+            <i class="fa-solid fa-circle-question"></i> Outra dúvida
+          </button>
         </div>
-        <div>
-          <select class="form-field">
-            <option value="" disabled selected>Tipo de evento</option>
-            <option>Casamento</option>
-            <option>Retiro Corporativo</option>
-            <option>Evento Privado</option>
-            <option>Imersão na Natureza</option>
-            <option>Outro</option>
-          </select>
-        </div>
-        <div>
-          <textarea class="form-field" rows="3" placeholder="Conte-nos sobre o seu momento" style="resize:none; padding-top:14px"></textarea>
-        </div>
-      </div>
-      <button class="btn-submit">Enviar Mensagem</button>
+
+        <!-- botão principal -->
+        <a
+          href="https://wa.me/5511999990000"
+          target="_blank"
+          rel="noopener"
+          class="wa-btn-main"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Falar pelo WhatsApp
+        </a>
+
+      </div><!-- .wa-card -->
+
     </div>
   </div>
 </section>
@@ -905,6 +945,13 @@ window.addEventListener('load', () => {
   const track = document.querySelector('.depo-track');
   if (track) track.classList.add('is-running');
 });
+
+const WA_NUMBER = '5511999990000'; // ← troque pelo número real (DDI+DDD+número)
+
+function sendWA(msg) {
+  const url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
 </script>
 </body>
 </html>
