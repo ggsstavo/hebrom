@@ -593,7 +593,6 @@
   /* ─── SECTION: CONTATO ─── */
   #contato {
   background: var(--cream); padding: 100px 80px;
-  border-top: 1px solid rgba(0,0,0,.06);
 }
 
 .contato-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; align-items: center; }

@@ -90,7 +90,7 @@ self.addEventListener('fetch', event => {
      é instantâneo. Quando mudam, basta atualizar
      CACHE_VERSION para descartar o cache antigo          */
   if (
-    request.destination === 'style'  ||
+    // request.destination === 'style'  ||
     request.destination === 'script' ||
     request.destination === 'font'   ||
     url.hostname.includes('fonts.googleapis.com') ||
