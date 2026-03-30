@@ -637,7 +637,7 @@
   flex-shrink: 0;
 }
 
-.wa-avatar i { font-size: 18px; color: #fff; }
+.wa-avatar img { width: 38px; border-radius: 50%; color: #fff; }
 
 .wa-header-info { flex: 1; }
 
