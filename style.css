@@ -1,17 +1,19 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --cream: #f0ece4;
-    --tan: hsl(28, 25%, 82%);
-    --green: hsl(140, 13%, 33%);
-    --green-hover: #2e4332;
-    --dark: #2a2724;
-    --muted: hsl(30, 5%, 16%);
-    --border: #b8b0a8;
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'DM Sans', sans-serif;
-    --muted-foreground: hsl(30, 5%, 40%);;
-  }
+  --cream: #f0ece4;
+  --tan: hsl(28, 25%, 82%);
+  --green: hsl(140, 13%, 33%);
+  --green-hover: #2e4332;
+  --dark: #2a2724;
+  --muted: hsl(30, 5%, 16%);
+  --border: #b8b0a8;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  /* antes: hsl(30, 5%, 40%) */
+  --muted-foreground: hsl(30, 5%, 35%);
+}
 
   html { scroll-behavior: smooth; }
 
